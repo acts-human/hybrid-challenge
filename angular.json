@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "hybrid-challenge"
+    }
+  },
+  "defaultProject": "hybrid-challenge",
+  "cli": {
+    "analytics": false
+  }
 }
