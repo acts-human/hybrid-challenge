@@ -20,11 +20,18 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should set username`, () => {
+  it(`should set firstname`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    app.onUsernameUpdated('Hello World!');
-    expect(app.username).toBe('Hello World!');
+    app.onFirstnameUpdated('Hello');
+    expect(app.firstname).toBe('Hello');
+  });
+
+  it(`should set lastname`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    app.onLastnameUpdated('World');
+    expect(app.lastname).toBe('World');
   });
 
 });

@@ -13,15 +13,21 @@ export class NameInputComponent implements OnInit, OnDestroy {
   form: FormGroup;
 
   @Output()
-  username = new EventEmitter<string>();
+  firstname = new EventEmitter<string>();
+
+  @Output()
+  lastname = new EventEmitter<string>();
 
   constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
     this.createForm();
     this.subscriptions.push(
-      this.form.get('name').valueChanges.subscribe(() => {
-        this.username.emit(this.form.get('name').value);
+      this.form.get('firstname').valueChanges.subscribe(() => {
+        this.firstname.emit(this.form.get('firstname').value);
+      }),
+      this.form.get('lastname').valueChanges.subscribe(() => {
+        this.lastname.emit(this.form.get('lastname').value);
       })
     );
   }
@@ -33,7 +39,8 @@ export class NameInputComponent implements OnInit, OnDestroy {
 
   createForm(): void {
     this.form = this.fb.group({
-      name: ['']
+      firstname: [''],
+      lastname: ['']
     });
   }
 

@@ -7,10 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent  {
 
-  username: string;
+  firstname: string;
+  lastname: string;
 
-  onUsernameUpdated(username: string) {
-    this.username = username;
+  onFirstnameUpdated(firstname: string) {
+    this.firstname = firstname;
   }
 
+  onLastnameUpdated(lastname: string) {
+    this.lastname = lastname;
+  }
 }

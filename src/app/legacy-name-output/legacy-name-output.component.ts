@@ -5,8 +5,12 @@ import {UpgradeComponent} from '@angular/upgrade/static';
   selector: 'legacy-name-output'
 })
 export class LegacyNameOutputComponentWrapper extends UpgradeComponent {
+
   @Input()
-  public username: string;
+  public firstname: string;
+
+  @Input()
+  public lastname: string;
 
   constructor(elementRef: ElementRef, injector: Injector) {
     super('legacyNameOutputComponent', elementRef, injector);
