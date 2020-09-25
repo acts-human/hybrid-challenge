@@ -5,7 +5,7 @@ function LegacyNameOutputController() {
 
 export const LegacyNameOutputComponent = {
   template: `
-    <p>Name: <strong>{{ $ctrl.username }}</strong></p>
+    <p>Name: <strong id="legacy-username">{{ $ctrl.username }}</strong></p>
   `,
   controller: LegacyNameOutputController,
   bindings: {
