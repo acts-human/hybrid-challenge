@@ -13,7 +13,7 @@ export class NameInputComponent implements OnInit, OnDestroy {
   form: FormGroup;
 
   @Output()
-  name = new EventEmitter<string>();
+  username = new EventEmitter<string>();
 
   constructor(private fb: FormBuilder) { }
 
@@ -21,7 +21,7 @@ export class NameInputComponent implements OnInit, OnDestroy {
     this.createForm();
     this.subscriptions.push(
       this.form.get('name').valueChanges.subscribe(() => {
-        this.name.emit(this.form.get('name').value);
+        this.username.emit(this.form.get('name').value);
       })
     );
   }

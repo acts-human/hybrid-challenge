@@ -1,1 +1,12 @@
-<router-outlet></router-outlet>
+<h1>AngularJS/Angular Hybrid App</h1>
+<h3>Angular Reactive Forms Input Component</h3>
+<app-name-input (username)="onUsernameUpdated($event)"></app-name-input>
+<hr>
+<h3>AngularJS Legacy Component</h3>
+<legacy-name-output [username]="username"></legacy-name-output>
+<hr>
+<h3>Angular Component</h3>
+<app-name-output [username]="username"></app-name-output>
+<br>
+<p>I used Angular CLI to create a new Angular 10 project, then added necessary
+  configurations and bootstrapping to use AngularJS components.</p>
